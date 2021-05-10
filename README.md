@@ -4,6 +4,14 @@ Python scripts to check subject IDs
 ### Requirements
 Python 3
 
+### Installation
+
+No installation required, just clone the git repo or download the code.
+
+```sh
+git clone https://github.com/PREDICT-DPACC/subject-id-validator.git
+```
+
 ### Usage
 
 ```sh
