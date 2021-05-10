@@ -33,6 +33,6 @@ def validate(some_id):
     return True
 
 if not validate(id_to_check):
-    raise ValueError('ID is invalid')
+    print('***ERROR: ID is invalid.')
 else:
-    print('ID is valid')
+    print('ID is valid.')
