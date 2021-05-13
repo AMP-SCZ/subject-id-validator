@@ -8,10 +8,14 @@ def validate(some_id):
     if not all([n.isdecimal() for n in some_id[2:6]]):
         return False
 
+    # Check for uppercase
+    if some_id[0].islower() or some_id[1].islower():
+        print('* Warning: Uppercase letters preferred *')
+
     # Convert ID to array of numbers, excluding check digit
     id_array = []
-    id_array.append(ord(some_id[0]))
-    id_array.append(ord(some_id[1]))
+    id_array.append(ord(some_id[0].upper()))
+    id_array.append(ord(some_id[1].upper()))
     id_array = id_array + list(some_id[2:6])
 
     # Use check digit algorithm to generate correct check digit

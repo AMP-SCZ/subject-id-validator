@@ -35,7 +35,7 @@ False
 You may run our test suite with the following command:
 
 ```sh
-python test.py
+python test.py -b
 ```
 
 This may also give you ideas for how to test your own implementation.

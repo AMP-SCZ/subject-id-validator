@@ -10,6 +10,7 @@ class TestValidation(unittest.TestCase):
         self.assertTrue(validate('YA00015'))
         self.assertTrue(validate('AD00017'))
         self.assertTrue(validate('SL24980'))
+        self.assertTrue(validate('sl24980'))  # Same but lowercase
 
     def test_bad_check_digit(self):
         self.assertFalse(validate('ME01456'))  # Wrong check digit
