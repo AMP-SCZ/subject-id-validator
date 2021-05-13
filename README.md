@@ -29,3 +29,13 @@ True
 >>> validate('ME00012')
 False
 ```
+
+### Tests
+
+You may run our test suite with the following command:
+
+```sh
+python test.py
+```
+
+This may also give you ideas for how to test your own implementation.

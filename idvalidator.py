@@ -1,8 +1,11 @@
 def validate(some_id):
-    # Basic checks: len == 7 and first two chars are not numbers
+    # Basic checks: len == 7, first two chars are not numbers,
+    # all other chars are numbers
     if len(some_id) != 7:
         return False
     if some_id[0].isdecimal() or some_id[1].isdecimal():
+        return False
+    if not all([n.isdecimal() for n in some_id[2:6]]):
         return False
 
     # Convert ID to array of numbers, excluding check digit
