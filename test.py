@@ -8,9 +8,9 @@ class TestValidation(unittest.TestCase):
         self.assertTrue(validate('ME01459'))
         self.assertTrue(validate('me01459'))  # Same but lowercase
         self.assertTrue(validate('CA00902'))
-        self.assertTrue(validate('ca00902'))  # Same but lowercase
+        self.assertTrue(validate('Ca00902'))  # Same but w/ lowercase
         self.assertTrue(validate('BM26622'))
-        self.assertTrue(validate('bm26622'))  # Same but lowercase
+        self.assertTrue(validate('bM26622'))  # Same but w/ lowercase
         self.assertTrue(validate('BM43632'))
         self.assertTrue(validate('YA00015'))
         self.assertTrue(validate('YA93169'))
