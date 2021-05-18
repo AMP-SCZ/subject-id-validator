@@ -21,7 +21,7 @@ def validate(some_id):
     # Use check digit algorithm to generate correct check digit
     check_digit_array = []
 
-    for pos in range(0, len(id_array)):
+    for pos in range(len(id_array)):
         check_digit_array.append(int(id_array[pos]) * (pos+1))
     check_digit = sum(check_digit_array) % 10
 
