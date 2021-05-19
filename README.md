@@ -3,7 +3,7 @@ Python scripts to check subject IDs
 
 ## ID Schema
 
-A well-formed ID is 7 characters long, consisting of:
+A well-formed ID is 7 characters long, sequentially consisting of:
 
 - 2 uppercase letters (Site ID)
 - 4 digits
@@ -14,15 +14,15 @@ A well-formed ID is 7 characters long, consisting of:
 
 The check digit must correctly evaluate to the following:
 
-```
-(
+```bash
+{
   (ASCII value of 1st character * 1) +
   (ASCII value of 2nd character * 2) +
   (1st digit * 3) +
   (2nd digit * 4) +
   (3rd digit * 5) +
   (4th digit * 6)
-) mod 10
+} % 10
 ```
 
 </details>
@@ -52,9 +52,9 @@ You may also import the module directly in the Python interpreter or your own sc
 
 ```python
 >>> from idvalidator import validate
->>> validate('ME00011') # A valid ID.
+>>> validate('ME00011') # A valid ID
 True
->>> validate('ME00012') # An invalid ID (wrong check digit).
+>>> validate('ME00012') # An invalid ID (wrong check digit)
 False
 ```
 
