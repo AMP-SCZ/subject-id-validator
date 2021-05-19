@@ -21,6 +21,7 @@ class TestValidation(unittest.TestCase):
         self.assertTrue(validate('NN98764'))
 
     def test_bad_check_digit(self):
+        # See README.md for check digit algorithm
         self.assertFalse(validate('ME01456'))  # ME01459 Wrong check digit
         self.assertFalse(validate('CA09002'))  # CA00902 Swapped numbers
         self.assertFalse(validate('BM22662'))  # BM26622 Swapped numbers
@@ -31,6 +32,8 @@ class TestValidation(unittest.TestCase):
         self.assertFalse(validate('SL24870'))  # SL24980 Changed numbers
 
     def test_badly_formed_ids(self):
+        # A well-formed ID is 7 characters long, consisting of two
+        # letters followed by four digits
         self.assertFalse(validate('ME501459'))  # Too long
         self.assertFalse(validate('01459'))     # Too short
         self.assertFalse(validate('ABCDEFG'))   # All letters
