@@ -15,7 +15,7 @@ A well-formed ID is 7 characters long, consisting of:
 The check digit must correctly evaluate to the following:
 
 ```
-sum (
+(
   (ASCII value of 1st character * 1) +
   (ASCII value of 2nd character * 2) +
   (1st digit * 3) +
@@ -46,7 +46,7 @@ git clone https://github.com/PREDICT-DPACC/subject-id-validator.git
 python check.py [-h] --id ID
 ```
 
-Where ID is the id to validate.
+Where `ID` is the Subject ID to validate.
 
 You may also import the module directly in the Python interpreter or your own scripts.
 
@@ -60,7 +60,7 @@ False
 
 The `validate` function will return `True` for valid IDs and `False` for invalid IDs.
 
-Note: This validator accepts lowercase letters for the Site ID but will print a warning.
+**Note**: This validator accepts lowercase letters for the Site ID but will print a warning.
 
 ### Tests
 
