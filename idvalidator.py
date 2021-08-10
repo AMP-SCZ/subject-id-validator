@@ -3,14 +3,12 @@ def validate(some_id):
     # all other chars are numbers
     if len(some_id) != 7:
         return False
-    if some_id[0].isdecimal() or some_id[1].isdecimal():
-        return False
-    if not all([n.isdecimal() for n in some_id[2:6]]):
+
+    if not (some_id[0].isalpha() and some_id[1].isalpha()):
         return False
 
-    # Check for uppercase
-    if some_id[0].islower() or some_id[1].islower():
-        print('* Warning: Uppercase letters preferred *')
+    if not all([n.isdecimal() for n in some_id[2:6]]):
+        return False
 
     # Convert ID to array of numbers, excluding check digit
     id_array = []
