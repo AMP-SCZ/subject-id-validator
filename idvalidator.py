@@ -3,8 +3,10 @@ def validate(some_id):
     # all other chars are numbers
     if len(some_id) != 7:
         return False
-    if some_id[0].isdecimal() or some_id[1].isdecimal():
+
+    if not (some_id[0].isalpha() and some_id[1].isalpha()):
         return False
+
     if not all([n.isdecimal() for n in some_id[2:6]]):
         return False
 
